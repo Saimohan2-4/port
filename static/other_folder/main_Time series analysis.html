@@ -1,99 +1,132 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Include Highlight.js library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <!-- Initialize Highlight.js -->
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightBlock(block);
         });
+        document
+          .getElementById("copy-btn")
+          .addEventListener("click", function () {
+            var copyBtn = this;
+            navigator.clipboard.writeText(document.getElementById("py-code").innerText);
+            copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+            setTimeout(function () {
+              copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+            }, 1500);
+          });
+      });
     </script>
     <style>
+      pre code {
+        display: block;
+        padding: 1em;
+        overflow-x: auto;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 100%;
+      }
+
+      .hljs-comment {
+        color: darkgreen;
+      }
+
+      .code h1 {
+        font-size: 25px;
+        margin: auto;
+        color: rgb(68, 52, 67);
+      }
+
+      @media screen and (max-width: 1030px) {
         pre code {
-            display: block;
-            padding: 1em;
-            overflow-x: auto;
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            width: 100%;
+          font-size: 13px;
         }
+      }
 
-        .hljs-comment {
-            color: darkgreen;
+      @media screen and (max-width: 950px) {
+        pre code {
+          font-size: 12px;
         }
+      }
 
-        .code h1 {
-            font-size: 25px;
-            margin: auto;
-            color: rgb(68, 52, 67);
+      @media screen and (max-width: 780px) {
+        pre code {
+          font-size: 11px;
         }
+      }
 
-        @media screen and (max-width: 1030px) {
-            pre code {
-                font-size: 13px;
-            }
+      @media screen and (max-width: 450px) {
+        pre code {
+          font-size: 10px;
         }
-
-        @media screen and (max-width: 950px) {
-            pre code {
-                font-size: 12px;
-            }
-        }
-
-        @media screen and (max-width: 780px) {
-            pre code {
-                font-size: 11px;
-            }
-        }
-
-        @media screen and (max-width: 450px) {
-            pre code {
-                font-size: 10px;
-            }
-        }
+      }
     </style>
-    <title>Saimohan's Graph </title>
-</head>
+    <title>Saimohan's Graph</title>
+  </head>
 
-<body>
-    <div class="flex p-14 justify-center items-center flex-col">
-        <div class="flex flex-col justify-center items-center space-y-6">
-            <h1 class="text-4xl font-semibold text-gray-800 ">Time Series Analysis</h1>
-            <p class="w-[80%] justify-content text-gray-700">
-                Time Series Analysis involves a comprehensive examination of sales patterns and trends over a specific
-                period. Utilizing a line chart, the order date is represented on the x-axis, while the y-axis reflects
-                sales data. This visualization enables a detailed exploration of fluctuations, allowing for the
-                identification of recurring patterns, seasonal variations, and overall trends within the dataset. The
-                analysis offers insights into the temporal dynamics of sales, aiding in strategic decision-making. By
-                observing the graphical representation of sales over time, businesses can make informed adjustments to
-                marketing strategies, inventory management, and other operational aspects. This analytical approach
-                provides a valuable framework for understanding the temporal evolution of sales data and facilitates
-                proactive responses to changing market conditions.
-            </p>
-            <ul class="pl-12 list-disc text-gray-700">
-                <li> From the below bar chart you can compare and identify trends/patterns over time.</li>
-                <li>To filter the graph based on the year, click on the buttons on the left side.</li>
-            </ul>
-            <div class="w-full flex justify-center items-center">
-                <iframe class="w-[80%] border p-4 h-[90vh]" src="subfolder/Time series analysis.html"></iframe>
-            </div>
-            <div class="flex w-full justify-center items-center px-4 text-sm ">
-                <div style="font-size: large;" class="code "><h1>Code</h1>
-                    <span class="-ml-14">
-                        <!-- Python code block with comments -->
-                        <pre>
-                            <code>
+  <body>
+    <div class="flex p-14 justify-center items-center max-w-[100vw] flex-col">
+      <div class="flex flex-col justify-center items-center space-y-6">
+        <h1 class="text-4xl font-semibold text-gray-800">
+          Time Series Analysis
+        </h1>
+        <p class="w-[80%] justify-content text-gray-700">
+          Time Series Analysis involves a comprehensive examination of sales
+          patterns and trends over a specific period. Utilizing a line chart,
+          the order date is represented on the x-axis, while the y-axis reflects
+          sales data. This visualization enables a detailed exploration of
+          fluctuations, allowing for the identification of recurring patterns,
+          seasonal variations, and overall trends within the dataset. The
+          analysis offers insights into the temporal dynamics of sales, aiding
+          in strategic decision-making. By observing the graphical
+          representation of sales over time, businesses can make informed
+          adjustments to marketing strategies, inventory management, and other
+          operational aspects. This analytical approach provides a valuable
+          framework for understanding the temporal evolution of sales data and
+          facilitates proactive responses to changing market conditions.
+        </p>
+        <ul class="pl-12 list-disc text-gray-700">
+          <li>
+            From the below bar chart you can compare and identify
+            trends/patterns over time.
+          </li>
+          <li>
+            To filter the graph based on the year, click on the buttons on the
+            left side.
+          </li>
+        </ul>
+        <div class="w-full flex justify-center max-w-[90%] items-center">
+          <iframe
+            class="w-[80%] border p-4 h-[90vh]"
+            src="subfolder/Time series analysis.html"></iframe>
+        </div>
+        <div
+          class="flex w-full justify-center max-w-[90%] items-center px-4 !mt-12 text-sm">
+          <div style="font-size: large" class="code">
+            <h1 class="max-w-[70%] text-xl font-semibold">Code</h1>
+            <span class="-ml-14">
+              <!-- Python code block with comments -->
+              <pre class="flex justify-center relative items-center">
+                  <span class="absolute text-gray-600 cursor-pointer right-[20%] z-50 top-4 text-sm !bg-[#f0f0f0]" id="copy-btn"><i class="fa fa-copy "></i> Copy</span>
+                            <code id="py-code" class="max-w-[70%] max-h-[400px] relative">
     #import necessary libraries
     import pandas as pd
     import plotly.graph_objects as go
@@ -177,11 +210,10 @@
     fig.show()
                             </code>
                         </pre>
-                    </span>
-                </div>
-            </div>
+            </span>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
