@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include Highlight.js library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <!-- Initialize Highlight.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+    <style>
+        pre code {
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 85%;
+            width: auto;
+        }
+        pre{
+
+            width: 100%;
+        }
+
+        .hljs-comment {
+            color: darkgreen; /* Set your desired color for comments */
+        }
+        .code h1{
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left:-100px;
+            color:rgb(68, 52, 67);
+
+
+
+        }
+    </style>
+    <title>Saimohan's Graph </title>
+</head>
+
+<body>
+    <div class="flex p-14 justify-center items-center flex-col">
+        <div class="flex flex-col justify-center items-center space-y-6">
+            <h1 class="text-4xl font-semibold text-gray-800 ">Time Series Analysis</h1>
+            <p class="w-[80%] justify-content text-gray-700">
+                Analyzing sales over time is crucial for identifying trends and patterns that can inform business decisions. By visualizing sales data on a line chart, with the x-axis representing the order date and the y-axis representing sales, we can gain valuable insights. This visualization enables us to track fluctuations in sales over different time periods, such as daily, weekly, or monthly, and identify any recurring patterns, seasonal trends, or sudden spikes or dips in sales. By observing these trends and patterns, businesses can better understand customer behavior, anticipate demand, optimize inventory management, and make informed decisions regarding pricing, promotions, and marketing strategies. Utilizing such visualizations empowers businesses to adapt and respond effectively to market dynamics, ultimately driving growth and profitability.
+            </p>
+            <ul class="pl-12 list-disc text-gray-700">
+                <li>From the below line chart you can compare 2 or more years, to identify trends/patterns over time.</li>
+                <li>To filter the graph based on the year, click on the legend element on the right side (Sales_Year)</li>
+            </ul>
+            <div class="w-full flex justify-center items-center">
+                <iframe class="w-[80%] border p-4 h-[90vh]" src="subfolder/Time series analysis Line chart.html"></iframe>
+            </div>
+            <div class="flex w-full justify-center items-center px-4 text-sm ">
+                <div style="font-size: large;" class="code"><h1>Code</h1>
+                    <span class="-ml-14">
+                        <pre>
+                            <code>
+        import plotly.express as px
+
+        long_df = px.data.medals_long()
+
+        # Create a bar chart
+        fig = px.bar(long_df, x="nation", y="count", color="medal", title="Long-Form Input")
+        fig.show()
+                            </code>
+                        </pre>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
