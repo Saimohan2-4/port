@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Sales Analysis Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Initialize Highlight.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+            document
+                .getElementById("btn")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("code").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+                document
+                .getElementById("copy-btn2")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code2").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+                document
+                .getElementById("copy-btn3")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code3").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+                document
+                .getElementById("copy-btn4")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code4").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+                document
+                .getElementById("copy-btn5")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code5").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+                document
+                .getElementById("copy-btn6")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code6").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+                document
+                .getElementById("copy-btn7")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code7").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                }); 
+                document
+                .getElementById("copy-btn8")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code8").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                }); 
+                document
+                .getElementById("copy-btn9")
+                .addEventListener("click", function () {
+                    var copyBtn = this;
+                    navigator.clipboard.writeText(document.getElementById("py-code9").innerText);
+                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                    setTimeout(function () {
+                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                    }, 1500);
+                });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0 auto;
+            max-width: 1030px;
+            padding: 20px;
+            background-color: #000000;
+            color: #ffffff6a;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .description-box {
+            border: 1px solid #000000;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .description-heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff6a;
+            text-align: left;
+        }
+
+        .description-paragraph {
+            text-align: left;
+            margin-left: 30px;
+            color: #9699c882;
+        }
+
+        .column-descriptions {
+            border: 1px solid #000000;
+            padding: 20px;
+            margin-top: -55px;
+            text-align: left;
+        }
+
+        .column-heading {
+            font-weight: bold;
+            font-size: 18px;
+            color: #ffffff6a;
+        }
+
+        .column-descriptions li {
+            margin-left: 20px;
+            color: #9699c882;
+        }
+
+        .column-descriptions h3 {
+            font-size: 24px;
+        }
+
+        .analysis {
+            text-align: left;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .analysis-heading h3 {
+            font-weight: bold;
+            font-size: 28px;
+
+        }
+
+        .analysis h2 {
+            color: rgba(104, 104, 171, 0.812);
+            font-weight: bold;
+            font-size: 24px;
+            margin-left: 30px;
+        }
+
+        .analysis-heading {
+            text-align: left;
+            font-size: 18px;
+            text-decoration: underline #6a72d982 ;
+            width: 100%;
+        }         
+        
+        .analysis p{
+            text-align: left;
+            margin-left: 75px;
+        }
+
+        .analysis ul {
+            margin-left: 100px;
+            margin-bottom: 50px;
+            color: #9699c882;
+        }
+
+        .graph-box {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .graph {
+            width: 800px;
+            height: 500PX;
+            border: #000000;
+            margin: 0 auto;
+        }
+        pre code {
+            display: block;
+            overflow-x: auto;
+            background-color: #a2a2a2;
+            border: 1px solid #ddd;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 100%;
+            color: #0d0909;
+            text-align: left;
+            max-width: 75%;
+            max-height: 400px;
+            margin: 0 auto;
+            margin-left: 18%;
+            position: relative;
+        }
+
+        .cpy-btn{
+            position: absolute;
+            font-size: 16px;
+            margin-top: 50px;
+            right: 10%;
+            cursor: pointer;
+            color: #00000082;
+            z-index: 5;
+            
+        }
+        .code{
+            position: relative;
+            max-width: 90%;
+            justify-content: center;
+            padding-bottom: 14px;
+        }
+        .code h1 {
+            font-size: 25px;
+            margin: auto;
+            color: #ffffff6a;
+            margin-top: 25px;
+            margin-bottom: 5px;
+            text-align: center;   
+        }
+        .hljs-comment {
+            color: darkgreen;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Supermarket Sales Analysis Project</h1>
+        <div class="description-box">
+            <h2 class="description-heading">Description</h2>
+            <p class="description-paragraph">This project entails an in-depth analysis of trends, patterns, and insights
+                derived from a comprehensive dataset capturing over 10,000 recorded purchases in a supermarket setting.
+                The dataset spans various product categories and encompasses transactions occurring between 2018 and
+                2020 across all 50 states of the USA. Prior to analysis, rigorous data cleaning and transformation
+                processes were conducted to ensure data integrity and consistency.</p>
+        </div>
+
+        <div class="column-descriptions">
+            <h3 class="column-heading">Column Descriptions</h3>
+            <ul>
+                <li><span class="column-heading">Order ID:</span> Unique identifier for each purchase order.</li>
+                <li><span class="column-heading">Customer Name:</span> Name of the customer associated with the
+                    purchase.</li>
+                <li><span class="column-heading">Category:</span> Broad classification of the product category.</li>
+                <li><span class="column-heading">Subcategory:</span> Further specification of the product category.</li>
+                <li><span class="column-heading">Cities:</span> Location where the purchase was made.</li>
+                <li><span class="column-heading">Order Date:</span> Date when the purchase transaction occurred.</li>
+                <li><span class="column-heading">Region:</span> Geographical region where the purchase was made.</li>
+                <li><span class="column-heading">Sales:</span> Total sales amount for the purchase.</li>
+                <li><span class="column-heading">Discount:</span> Discount applied to the purchase, if any.</li>
+                <li><span class="column-heading">Profit:</span> Profit generated from the sale.</li>
+                <li><span class="column-heading">States:</span> State where the purchase was made.</li>
+                <li><span class="column-heading">Postal Code:</span> Postal code associated with the location of the
+                    pur<span class="cpy-btn" id="copy-btn"><i class="fa fa-copy "></i> Copy</span>
+                    chase.</li>
+            </ul>
+        </div>
+
+        <div class="analysis">
+            <div class="analysis-heading">
+                <h3>Types of Analysis</h3>
+            </div>
+            <h2>Time Series Analysis</h2>
+            <p>Time Series Analysis involves a comprehensive examination of sales patterns and trends over a specific
+                period. Utilizing a line chart, the order date is represented on the x-axis, while the y-axis reflects
+                sales data. This visualization enables a detailed exploration of fluctuations, allowing for the
+                identification of recurring patterns, seasonal variations, and overall trends within the dataset. The
+                analysis offers insights into the temporal dynamics of sales, aiding in strategic decision-making. By
+                observing the graphical representation of sales over time, businesses can make informed adjustments to
+                marketing strategies, inventory management, and other operational aspects. This analytical approach
+                provides a valuable framework for understanding the temporal evolution of sales data and facilitates
+                proactive responses to changing market conditions.</p>
+            <ul>
+                <li>From the below bar chart you can compare and identify trends/patterns over time.</li>
+                <li>To filter the graph based on the year, click on the buttons on the left side.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Time series analysis.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+            <pre>
+                    <span class="cpy-btn" id="btn"><i class="fa fa-copy "></i> Copy</span>
+    
+                    <code id="code">
+#import necessary libraries
+import pandas as pd
+import plotly.graph_objects as go
+
+# reading the csv file
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+
+# assigning that csv file variable to the pandas dataframe, we can do df= pd.DataFrame(Filepath.csv) also.
+df = pd.DataFrame(df2)
+
+# Convert 'Sales' column to float
+sales = list(df['Sales'].astype(float))
+
+# Convert 'Order Date' column to datetime, to access year, the column needs to be changed to datetime format.
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+
+# Extract Year,Month from 'Order Date'
+df['Year'] = df['Order Date'].dt.year
+df['Month'] = df['Order Date'].dt.month_name()
+
+# Calculate the sum of sales for each year
+sales_sum_per_year = df.groupby('Year')['Sales'].sum().reset_index()
+
+# Calculate the sum of sales for each year and month
+sales_sum_per_month = df.groupby(['Year', 'Month'])['Sales'].sum().reset_index()
+
+# variable called year as a list
+years = list(sales_sum_per_year['Year'])
+
+# list for sales per year
+sales_per_year = list(sales_sum_per_year['Sales'])
+
+# Create a dictionary to store monthly sales for each year
+monthly_sales_dict = {
+year: list(sales_sum_per_month.loc[sales_sum_per_month['Year'] == year, 'Sales'])
+for year in years
+}
+
+# Define the order of months, if data is in order, skip this part
+month_order = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+# Create a bar chart using Plotly Graph Objects (go)
+fig = go.Figure(data=[go.Bar(x=years, y=sales_per_year)])
+fig.update_layout(title=dict(text="Yearly Sales Analysis", font=dict(size=30, color="mediumpurple")))
+fig.update_layout(
+updatemenus=[
+    dict(
+        buttons=[dict(
+            label="(All)",
+            method="update",
+            args=[{
+                "y": [sales_per_year],
+                "x": [years],
+                "title": "Yearly Sales",
+                "xaxis_title": "Year",
+                "yaxis_title": "Total Sales"
+            }],
+        ),
+        *[
+            dict(
+                args=[{
+                    "y": [monthly_sales_dict[i]],
+                    "x": [sales_sum_per_month.loc[sales_sum_per_month['Year'] == i, 'Month']],
+                    "title": f"Monthly Sales for {i}",
+                    "xaxis_title": "Month",
+                    "yaxis_title": "Sales"
+                }],
+                label=str(i),
+                method="update"
+            ) for i in years
+        ]
+    ],            color: rgb(80, 115, 255)
+    direction="down"
+)]
+)
+
+# Set the order of months for x-axis
+fig.update_xaxes(categoryorder="array", categoryarray=month_order)
+# Display the plot
+fig.write_html("Time series analysis.html")
+fig.show()
+                    </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Time Series Analysis II</h2>
+            <p>Analyzing sales over time is crucial for identifying trends and patterns that can inform business decisions. By visualizing sales data on a line chart, with the x-axis representing the order date and the y-axis representing sales, we can gain valuable insights. This visualization enables us to track fluctuations in sales over different time periods, such as daily, weekly, or monthly, and identify any recurring patterns, seasonal trends, or sudden spikes or dips in sales. By observing these trends and patterns, businesses can better understand customer behavior, anticipate demand, optimize inventory management, and make informed decisions regarding pricing, promotions, and marketing strategies. Utilizing such visualizations empowers businesses to adapt and respond effectively to market dynamics, ultimately driving growth and profitability.</p>
+            <ul>
+                <li>From the below line chart you can compare 2 or more years, to identify trends/patterns over time.</li>
+                <li> To filter the graph based on the year, click on the legend element on the right side(Sales_Year)</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Time series analysis Line chart.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn2"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code2">
+import pandas as pd
+import plotly.graph_objects as go
+
+# reading the csv file
+df2=pd.read_csv('Main Port/Retail sales analysis.csv')
+
+# assigning that csv file variable to the pandas dataframe, we can do df= pd.DataFrame(Filepath.csv) also.
+df = pd.DataFrame(df2)
+
+# Convert 'Sales' to float
+sales = list(df['Sales'].astype(float))
+
+# Convert 'Order Date' column to datetime, to access year, the column needs to be changed to datetime format.
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+year = list(df['Order Date'].dt.year)
+selected_year = year[0]
+
+# Extract Year from 'Order Date'
+df['Year'] = df['Order Date'].dt.year
+df['Month'] = df['Order Date'].dt.month_name()
+
+# Calculate the sum of sales for each year
+sales_sum_per_year = df.groupby('Year')['Sales'].sum().reset_index()
+
+# Calculate the sum of sales for each year and month
+sales_sum_per_month = df.groupby(['Year', 'Month'])['Sales'].sum().reset_index()
+
+years = list(sales_sum_per_year['Year'])
+sales_per_year = list(sales_sum_per_year['Sales'])
+
+# Create a dictionary to store monthly sales for each year
+monthly_sales_dict = {
+    year: list(sales_sum_per_month.loc[sales_sum_per_month['Year'] == year, 'Sales'])
+    for year in years
+}
+
+# Define the order of months
+month_order = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+# Create a line chart using Plotly Express
+fig = go.Figure()
+
+# Add a trace for each year
+for i, year in enumerate(years):
+    fig.add_trace(go.Line(x=month_order, y=monthly_sales_dict[year], name=f"Sales {year}"))
+
+#update layout for titles fonts and colors
+fig.update_layout(title=dict(text="Sales Analysis Per year",font=dict(size=30)), 
+                  xaxis_title=dict(text="MONTHS",font=dict(size=20,family="Poppins",color="blue")),
+                  yaxis_title=dict(text="SALES",font=dict(size=20,family="Poppins",color="blue")))
+#Display the plot
+fig.write_html("Time series analysis Line chart.html")
+fig.show()
+                                            </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Sales Distribution by Category and Subcategory</h2>
+            <p>Bar charts are effective tools for visualizing the distribution of sales across different product categories and subcategories, enabling businesses to identify top-performing and underperforming product types. By categorizing sales data into various product categories and subcategories, and representing them as bars on the chart, we can quickly assess the relative performance of each product type. The height of each bar represents the total sales volume for that particular category or subcategory, allowing for easy comparison between different segments. Analyzing these bar charts helps businesses identify which product categories are generating the most revenue and which ones may require further attention or improvement. This insight enables businesses to allocate resources more effectively, optimize marketing strategies, adjust inventory levels, and make informed decisions to maximize overall sales performance and profitability across their products.</p>
+            <ul>
+                <li>To filter the graph based on the categories, click on the buttons on the left side.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Sales Analysis by Cat and SUbcat.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn3"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code3">
+# import pandas, plotly packages
+import pandas as pd
+import plotly.graph_objects as go
+
+# Read your csv file or use df = pd.DataFrame(filepath.csv)
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+df = pd.DataFrame(df2)
+
+# Convert 'Order Date' column to datetime, to access the year, the column needs to be changed to datetime format.
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+
+# Extract Year from 'Order Date'
+df['Year'] = df['Order Date'].dt.year
+
+# Group by 'Category' and 'Sub Category', then sum the 'Sales' for each group
+sale_per_cat_subcate = df.groupby(['Category', 'Sub Category'])['Sales'].sum().reset_index()
+
+# Sort the DataFrame by 'Sales' in descending order for both category and subcategory
+sales_category = df.groupby('Category')['Sales'].sum().reset_index().sort_values(by='Sales', ascending=False)
+sale_per_cat_subcate = sale_per_cat_subcate.sort_values(by='Sales', ascending=False)
+
+# Lists for x, y for all categories and sales
+Sales_cat = list(sales_category['Sales'])
+list_cats = list(sales_category['Category'])
+
+# Lists for x,y on click on dropdown button
+list_s_cats = list(sale_per_cat_subcate['Sub Category'])
+list_sales_sub_cat = list(sale_per_cat_subcate['Sales'])
+
+# Create a dictionary to store sales by subcategory for each category
+subcategory_sale_dict = {
+    cat: list(sale_per_cat_subcate.loc[sale_per_cat_subcate['Category'] == cat, 'Sales'])
+    for cat in list_cats
+}
+
+# Create a dictionary to store subcategories for each category
+category_subcategory_dict = {
+    cat: list(sale_per_cat_subcate.loc[sale_per_cat_subcate['Category'] == cat, 'Sub Category'])
+    for cat in list_cats
+}
+
+# Create a Plotly figure
+fig = go.Figure()
+
+# Prepare text for hover labels
+cat_text = [f"Category: {cat}<br> Sales: {sales}" for cat, sales in zip(list_cats, Sales_cat)]
+
+# Create a bar chart with the initial data
+fig = go.Figure(data=[go.Bar(x=list_cats, y=Sales_cat, marker_color="cornflowerblue", text=cat_text)])
+
+# Update layout with buttons for interactive features
+fig.update_layout(
+    updatemenus=[
+        dict(
+            buttons=[
+                dict(
+                    label="(Total Sales by Category)",
+                    args=[{
+                        "x": [list_cats],
+                        "y": [Sales_cat],
+                        
+                        "text": [cat_text]  
+                    }],
+                    method="update",
+                ),
+                *[
+                    dict(
+                        args=[{
+                            "x": [category_subcategory_dict[j]],  # Use subcategories as x-axis labels
+                            "y": [subcategory_sale_dict[j]],
+                            "text": [
+                                [f"Category: {j}<br>Subcategory: {sub}<br>Sales: {sale}"
+                                 for sub, sale in zip(category_subcategory_dict[j], subcategory_sale_dict[j])]]
+                        }],
+                        label=str(j),
+                        method="update"
+                    ) for j in list_cats
+                ]
+            ],
+            direction="down"
+        )
+    ],
+    title=dict(text="Analysis of Sales by Category & Subcategory",font=dict(size=30,color="slateblue"))
+)
+
+fig.write_html("Sales Analysis by Cat and SUbcat.html")
+# Display the figure
+fig.show()                                         
+   </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Geospatial Analysis</h2>
+            <p>Utilizing a map visualization to showcase sales distribution across various locations provides a powerful means of understanding regional sales patterns. By plotting sales data on a geographic map, businesses can visualize which regions are contributing the most to overall sales and identify potential areas for growth or improvement. Each location on the map is represented by a marker or a shaded area, with the intensity of color or size of the marker indicating the level of sales activity in that particular region. This visualization enables businesses to identify key markets, pinpoint areas with high sales potential, and allocate resources accordingly. Additionally, it helps in understanding geographical trends, such as areas of high demand or areas that may require targeted marketing efforts. By leveraging map visualizations, businesses can gain valuable insights into regional sales dynamics and make strategic decisions to enhance their market presence and drive revenue growth.</p>
+            <ul>
+                <li>To visualize the sales, hover over the states.</li>
+                <li>Through this we can find where the sales are peaking and not.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Geospatial Analysis Of Sales.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn4"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code4">
+# import pandas,plotly
+import plotly.graph_objects as go
+import pandas as pd
+
+# Example DataFrame
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+df = pd.DataFrame(df2)
+
+# Group by on states postal codes and sales
+states_s = df.groupby(['States', 'Postal Code'])['Sales'].sum().reset_index()
+
+# Lists for postal codes and states and sales
+Post_cds = list(states_s['Postal Code'])
+States = list(states_s['States'])
+sum_of_sales_states = list(states_s['Sales'].astype(int))
+
+# Create a fig called choropleth
+fig = go.Figure(data=go.Choropleth(locations=Post_cds,  # Spatial coordinates
+    z=sum_of_sales_states,  # Data to be color-coded
+    locationmode='USA-states',  # set of locations match entries in `locations`
+    colorscale='Portland',
+    colorbar_title="Sum of sales across USA",hovertext=States
+
+))
+
+fig.update_geos(
+    scope='usa',  # Set the map scope to USA
+     # Adjust the projection scale as needed
+)
+fig.update_layout(title=dict(text="Sales Analysis on USA-States",
+                             font=dict(size=30,color="maroon")))
+
+fig.write_html("Geospatial Analysis Of Sales.html")
+
+fig.show()                                          
+                      </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Profit Analysis by Region</h2>
+            <p>Comparing profits generated across different regions through a bar chart offers valuable insights into regional profitability. With a bar chart, each region is represented by a separate bar, and the height of the bar indicates the total profit generated in that region. This visualization enables businesses to identify which regions are the most profitable and understand the relative contribution of each region to overall profitability. By analyzing these charts, businesses can allocate resources strategically, prioritize high-profit regions for further investment or expansion, and identify regions where operational improvements may be needed to enhance profitability. Ultimately, leveraging bar charts to compare profits across different regions empowers businesses to make data-driven decisions and optimize their regional strategies for maximum profitability and growth.</p>
+            <ul>
+                <li>To filter the graph based on the year, click on the buttons on the left side.</li>
+                <li>Observe how the profits shared across regions.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Analysis Of profit by Region.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn5"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code5">
+# import pandas and plotly
+import pandas as pd
+import plotly.graph_objects as go
+
+# Read the CSV file
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+df = pd.DataFrame(df2)
+
+# converting the oder date to year and profits to float
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+df['Year'] = df['Order Date'].dt.year
+df['Profit'] = df['Profit'].astype(float)
+
+# Group by Region and calculate total profit
+profit_by_region = df.groupby('Region')['Profit'].sum().reset_index()
+
+# Group by Region and Year and calculate total profit
+profit_by_region_year = df.groupby(['Region', 'Year'])['Profit'].sum().reset_index()
+
+# Create a list of unique years
+years = df['Year'].unique()
+years.sort()
+
+# Create a bar chart using plotly.graph_objects
+fig = go.Figure()
+
+# Initial trace with the first year
+initial_year = years[0]
+initial_data = profit_by_region_year[profit_by_region_year['Year'] == initial_year]
+
+# Create BAR Graph
+fig.add_trace(go.Bar(
+    x=profit_by_region['Region'].tolist(),
+    y=profit_by_region['Profit'].tolist(),
+))
+
+# Set layout details
+fig.update_layout(
+    xaxis=dict(title='Region'),
+    yaxis=dict(title='Profit'),
+    updatemenus=[
+        dict(
+            type='buttons',
+            x=-0.15,
+            y=1,
+            buttons=[
+                dict(label='All Years',
+                     method='update',
+                     args=[{'x': [profit_by_region['Region'].tolist()],
+                            'y': [profit_by_region['Profit'].tolist()],
+                            'text': 'All Years'}]
+                     ),
+            ],
+            direction='down'
+        ),
+        dict(
+            type='dropdown',
+            buttons=[
+                dict(label=str(year),
+                     method='update',
+                     args=[{'x': [profit_by_region_year.loc[profit_by_region_year['Year'] == year]['Region'].tolist()],
+                            'y': [profit_by_region_year.loc[profit_by_region_year['Year'] == year]['Profit'].tolist()],
+                            'text': f'{year}'}])
+                for year in years
+            ],
+            direction='down'
+        ),
+    ]
+)
+
+fig.update_layout(
+    title=dict(
+    text=f"Analysis of Profits by Region ",
+    font=dict(size=30,color="navy")
+    )
+    )
+# Display the plot
+fig.show()      
+                    </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Sales vs. Profit Bubble Chart</h2>
+            <p>A bubble chart is an effective visualization tool for representing three dimensions of data simultaneously, such as sales, profit, and categories, using bubble size and color. Each bubble on the chart represents a data point, with the x-axis typically representing one dimension (e.g., sales), the y-axis representing another dimension (e.g., categories), and the bubble size or color representing the third dimension (e.g., profits).
+<br><br>
+                By exploring relationships between categories and sales using a bubble chart, businesses can gain insights into various aspects of their operations. For example, larger bubbles may indicate higher sales volume, while different colors could represent varying levels of profits gained. Analyzing these relationships can help identify which categories are driving sales and profitability, as well as the effectiveness of discount strategies across different product segments. This facilitates data-driven decision-making and enables businesses to optimize their sales and discounting strategies for maximum profitability and customer satisfaction.</p>
+            <ul>
+                <li>Hover over the bubbles for information of category and sub-category sales and profits.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Bubble chart Analysis on profit.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn9"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code9">
+# import packages
+import pandas as pd
+import plotly.express as px
+
+# Read the CSV file
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+df = pd.DataFrame(df2)
+
+# Convert 'Sales', 'Profit', and 'Discount' to appropriate data types
+df['Sales'] = df['Sales'].astype(float)
+df['Profit'] = df['Profit'].astype(float)
+df['Discount'] = df['Discount'].astype(float)
+
+# Aggregate Sales and Profit by Sub Category
+subcat_agg = df.groupby(['Sub Category','Category']).agg({'Sales': 'sum', 'Profit': 'sum'}).reset_index()
+
+# Create a bubble chart using Plotly Express
+fig = px.scatter(subcat_agg, x='Sales', y='Category', size='Sales', color='Profit',
+                 size_max=50, template='plotly_dark',hover_name='Sub Category',
+                 labels={'Sub Category': 'Sub-Category', 'Sales': 'Total Sales', 'Profit': 'Total Profit'})
+
+# Set layout details
+fig.update_layout(title=dict(text='Bubble Chart: Total Sales and Profit by Sub-Category'
+                             ,font=dict(size=30,color="darkseagreen")),
+                  xaxis_title='Sub-Category', yaxis_title='Total Profit')
+
+# Set background color to black
+fig.update_layout(
+    paper_bgcolor='black',
+    plot_bgcolor='black',
+    font=dict(color='white')
+)
+
+fig.write_html("Bubble chart Analysis on profit.html")
+# Display the plot
+fig.show()
+                    
+                    </code>
+                </pre>
+        </div>
+        
+        <div class="analysis">
+            <h2>Category-wise profits Analysis</h2>
+            <p>Utilizing bar charts to analyze the distribution of profits across various product categories offers valuable insights into the profitability of different types of products. Each product category is represented by a separate bar, with the height of the bar indicating the total profits generated by products within that category. By examining these bar charts, businesses can quickly identify which product categories contribute the most to overall profitability and which ones may require further attention or optimization.</p>
+            <ul>
+                <li> From the below bar chart you can compare 2 or more years, to identify trends/patterns over time.</li>
+                <li>Observe how the profit varies from one category an other. </li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Analysis Of profit by Cat and Subcat.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn7"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code7">
+# import pandas,plotly
+import pandas as pd
+import plotly.graph_objects as go
+df2=pd.read_csv('Main Port/Retail sales analysis.csv')
+
+df = pd.DataFrame(df2)
+
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+df['Year']=df['Order Date'].dt.year
+
+profit_per_cat_subcate=df.groupby(['Category','Sub Category'])['Profit'].sum().reset_index()
+
+# for the first bar to show all the profits year per regions
+Profit_category=df.groupby('Category')['Profit'].sum().reset_index()
+#finding profit if the product is sold 20% more than the Cost Of the Goods Sold to Business(COGS)
+
+list_sub_cat=list(profit_per_cat_subcate["Sub Category"])
+
+
+#lists for x,y
+cat_pro=list(Profit_category['Profit'])
+list_cats=list(set(Profit_category['Category']))
+list_s_cats=list(profit_per_cat_subcate['Sub Category'])
+list_su_Pro_cat=list(profit_per_cat_subcate['Profit'])
+
+dicts_of_cats_subs_cats={}
+for j in list_cats:
+    subcatse_cats=df[df.Category.isin([j])]
+    subcatse_cats=subcatse_cats["Sub Category"]
+    list_Sub_cats_in_dict=list(set(subcatse_cats))
+    dicts_of_cats_subs_cats[j] = list_Sub_cats_in_dict 
+# Create a dictionary to store monthly sales for each year
+category_profit_dict = {
+    cat: list(profit_per_cat_subcate.loc[profit_per_cat_subcate['Category'] == cat, 'Profit'])
+    for cat in list_cats
+}
+
+# Create a dictionary to store profits by subcategory for each category
+subcategory_profit_dict = {
+    cat: list(profit_per_cat_subcate.loc[profit_per_cat_subcate['Category'] == cat, 'Profit'])
+    for cat in list_cats
+}
+
+# Create a dictionary to store subcategories for each category
+category_subcategory_dict = {
+    cat: list(profit_per_cat_subcate.loc[profit_per_cat_subcate['Category'] == cat, 'Sub Category'])
+    for cat in list_cats
+}
+
+subcategory_colors = ['rgb(0, 0, 255)', 'rgb(255, 0, 0)', 'rgb(255, 255, 0)', 'rgb(0, 128, 0)', 'rgb(128, 0, 128)', 'rgb(255, 0, 255)', 'rgb(200, 200, 200)']
+
+
+cat_text= [f"Category:{cat}<br> Profit:{pro}" for cat,pro in zip(list_cats,cat_pro)]
+
+fig = go.Figure(data=[go.Bar(x=list_cats, y=cat_pro,marker_color="dodgerblue",text=cat_text)])
+fig.update_layout(
+    updatemenus=[
+        dict(
+            buttons=[
+                dict(
+                    label="(Total Profits by Category)",
+                    args=[{
+                        "x": [list_cats],
+                        "y": [cat_pro],
+                        "marker_color": ['rgb(0, 0, 80)'] * len(list_cats),  
+                        "text":[cat_text] #Blue
+                    }],
+                    method="update",
+                ),
+                *[
+                    dict(
+                        args=[{
+                            "x": [category_subcategory_dict[j]],  # Use subcategories as x-axis labels
+                            "y": [subcategory_profit_dict[j]],
+                            "text":[[f"Category: {j}<br>Subcategory: {sub}<br>Profit: {profit}"
+                         for sub, profit in zip(category_subcategory_dict[j], subcategory_profit_dict[j])]]
+                         }],
+                            
+                        label=str(j),
+                        method="update"
+                    ) for j in list_cats
+                ]
+            ],
+            direction="down"
+        )
+    ],
+    title=dict(text="Analysis of Profit by Category & Sub category",font=dict(size=30,color="indigo"))
+)
+fig.write_html("Analysis Of profit by Cat and Subcat.html")
+fig.show()
+                    
+                    </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Percetage analysis</h2>
+            <p>Comparing the percentage of profits generated by each product category allows businesses to understand how profit margins vary across different types of products. <br><br>
+                This analysis enables businesses to prioritize resources, investments, and marketing efforts towards high-profit product categories, while also identifying opportunities for improving profitability in underperforming categories. Leveraging bar charts for such analysis facilitates data-driven decision-making and helps businesses optimize their product mix and pricing strategies to maximize overall profitability.</p>
+            <ul>
+                <li>Observe the stacked bar charts for the insights on profit percentage across subcategory.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Sales percentage Analysis.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn8"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code8">
+# import pandas, plotly packages
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+# Read your csv file or use df = pd.DataFrame(filepath.csv)
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+df = pd.DataFrame(df2)
+
+# Group by category and sales 
+Category_sales = df.groupby('Category')['Sales'].sum().reset_index()
+
+# Group by  Category, Sub Cateogry and Sales
+Subcategory_sales = df.groupby(['Category', 'Sub Category'])['Sales'].sum().reset_index()
+
+# Lists for sales, Category and converting sales datatype to Float
+sales = list(df['Sales'].astype(float))
+catergory_s = list(Category_sales['Category'])
+
+# Creating a dictionary to store category and their respective subcategories
+dicts_of_cats_subs_cats={} 
+for j in catergory_s:
+    subcatse_cats=df[df.Category.isin([j])]
+    subcatse_cats=subcatse_cats["Sub Category"]
+    list_Sub_cats_in_dict=list(set(subcatse_cats))
+    dicts_of_cats_subs_cats[j] = list_Sub_cats_in_dict 
+
+# sum of category
+total_sales_cat=sum(Category_sales["Sales"])
+
+# Dictionary for having all the categories total sales
+category_total_sales = {category: sum(df[df["Category"] == category]["Sales"]) for category in set(df["Category"])}
+
+# Recalculate subcategory percentages based on category totals
+subcategory_percentages_within_category = {}
+for category, subcategories in dicts_of_cats_subs_cats.items():
+    total_sales_for_category = category_total_sales[category] 
+    print(total_sales_for_category) # Get total sales for this category
+    for subcategory in subcategories:
+        subcategory_sales = sum(df[df["Sub Category"] == subcategory]["Sales"])
+        percentage = (subcategory_sales / total_sales_for_category) * 100
+        subcategory_percentages_within_category[subcategory] = percentage
+
+# Generate a list of distinct colors for subcategories
+subcategory_colors = px.colors.qualitative.Set2  # Or choose a different color palette
+fig = go.Figure()
+
+# Iterate through categories and their subcategories
+for i, (category, subcategories) in enumerate(dicts_of_cats_subs_cats.items()):
+    start_value = 0  # Track starting position for each category
+    for j, subcategory in enumerate(subcategories):
+        subcategory_percentage = subcategory_percentages_within_category[subcategory]
+        fig.add_trace(go.Bar(
+            y=[category],
+            x=[subcategory_percentage],
+            name=subcategory,
+            orientation='h',
+            marker=dict(
+                color=subcategory_colors[j % len(subcategory_colors)],
+                 # Adjust bar width
+            )
+        ))
+
+        # Add text annotations using subcategory_percentages
+        fig.add_annotation(
+            x=start_value + subcategory_percentage / 2,
+            y=category,
+            text=f"{subcategory}\n({subcategory_percentage:.1f}%)",
+            xref="x",
+            yref="y",
+            showarrow=False,
+            font=dict(size=10)  # Adjust font size if needed
+        )
+        start_value += subcategory_percentage
+
+# Adjust layout for stacked bars and visibility
+fig.update_layout(
+    xaxis_range=[0,100],
+    xaxis_tickvals=[0, 25, 50, 75, 100],
+    xaxis_ticktext=['0%', '25%', '50%', '75%', '100%'],
+    barmode='stack',
+      title=dict(text="Category and Sub Category Profit Percentage",font=dict(size=30,color="darkblue")))  # Stack the bars)
+
+fig.write_html("Sales percentage Analysis.html")
+
+fig.show()
+                    
+                    </code>
+                </pre>
+        </div>
+        <div class="analysis">
+            <h2>Discount vs. Profit Plot</h2>
+            <p>Using a line plot to explore the relationship between discounts offered and profits gained provides a 
+                visual representation of any potential connections between these variables. 
+                Each data point on the line plot represents a transaction, with the x-axis representing the years 
+                and the y-axis representing the corresponding profits and discount over the year. 
+                This graphical analysis enables businesses to discern patterns or trends within the data.
+                <br>
+                <br>
+                Examining the plot allows organizations to determine whether there is a positive, negative, 
+                or neutral correlation between the discounts provided and the resulting profits. A positive correlation suggests that higher discounts may lead to increased profitability, while a negative correlation indicates that higher discounts could result in reduced profitability. Conversely, no correlation implies that discounts have little to no impact on profitability.
+            <ul>
+                <li>Feel free to examine the graphs as you wish.</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <iframe class="graph" src="graphs/Scatter plot for Dis & Pro.html"></iframe>
+        </div>
+        <div class="code"><h1 class="column-heading">Code</h1>
+                                <!-- Python code block with comments -->
+                <pre>
+                    <span class="cpy-btn" id="copy-btn6"><i class="fa fa-copy "></i> Copy</span>
+
+                    <code id="py-code6">
+#import packages pandas, plotly
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+# Assuming 'df' is your DataFrame with 'Order Date', 'Discount', and 'Profit' columns
+df2 = pd.read_csv('Main Port/Retail sales analysis.csv')
+
+df = pd.DataFrame(df2)
+
+# Convert 'Order Date' column to datetime
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+
+# Extract Year from 'Order Date' column
+df['Year'] = df['Order Date'].dt.year
+
+# Group by Year and calculate average discount
+avg_discount_per_year = df.groupby('Year')['Discount'].mean().reset_index()
+
+# Group by Year and calculate total profit
+total_profit_per_year = df.groupby('Year')['Profit'].sum().reset_index()
+
+
+# Create subplots with 1 row and 2 columns
+fig = make_subplots(rows=1, cols=2, subplot_titles=['Average Discount', 'Total Profit'])
+
+# Add average discount subplot on the left side
+fig.add_trace(go.Scatter(x=avg_discount_per_year['Year'], y=avg_discount_per_year['Discount'], mode='lines', line=dict(color='orange'), name='Average Discount'), row=1, col=1)
+
+# Add total profit subplot on the right side
+fig.add_trace(go.Scatter(x=total_profit_per_year['Year'], y=total_profit_per_year['Profit'], mode='lines',line=dict(color='mediumpurple'), name='Total Profit'), row=1, col=2)
+
+# Update layout
+fig.update_layout(title=dict(text='Average Discount and Total Profit over Years',font=dict(size=30,color="mediumpurple")), showlegend=False)
+
+fig.write_html("Scatter plot for Dis & Pro")
+# Display the combined plot
+fig.show()
+                    
+                    </code>
+                </pre>
+        </div>
+    </div>
+</body>
+
+</html>
