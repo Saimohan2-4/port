@@ -10,100 +10,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Initialize Highlight.js -->
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-            document
-                .getElementById("btn")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("code").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
-                document
-                .getElementById("copy-btn2")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code2").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
-                document
-                .getElementById("copy-btn3")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code3").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
-                document
-                .getElementById("copy-btn4")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code4").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
-                document
-                .getElementById("copy-btn5")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code5").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
-                document
-                .getElementById("copy-btn6")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code6").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
-                document
-                .getElementById("copy-btn7")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code7").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                }); 
-                document
-                .getElementById("copy-btn8")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code8").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                }); 
-                document
-                .getElementById("copy-btn9")
-                .addEventListener("click", function () {
-                    var copyBtn = this;
-                    navigator.clipboard.writeText(document.getElementById("py-code9").innerText);
-                    copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
-                    setTimeout(function () {
-                        copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
-                    }, 1500);
-                });
+      document.addEventListener('DOMContentLoaded', (event) => {
+            function handleCopy(btnId, targetId) {
+                const copyBtn = document.getElementById(btnId);
+                const target = document.getElementById(targetId);
+                if (copyBtn && target) {
+                    copyBtn.addEventListener("click", function () {
+                        navigator.clipboard.writeText(target.innerText);
+                        copyBtn.innerHTML = '<i class="fa fa-check"></i> Copied';
+                        setTimeout(function () {
+                            copyBtn.innerHTML = '<i class="fa fa-copy"></i> Copy';
+                        }, 1500);
+                    });
+                } else {
+                    console.error("Element with ID " + btnId + " or " + targetId + " not found.");
+                }
+            }
+
+            for (let i = 1; i <= 9; i++) {
+                handleCopy("copy-btn" + i, "py-code" + i);
+            }
         });
     </script>
     <style>
@@ -287,8 +213,7 @@
                 <li><span class="column-heading">Profit:</span> Profit generated from the sale.</li>
                 <li><span class="column-heading">States:</span> State where the purchase was made.</li>
                 <li><span class="column-heading">Postal Code:</span> Postal code associated with the location of the
-                    pur<span class="cpy-btn" id="copy-btn"><i class="fa fa-copy "></i> Copy</span>
-                    chase.</li>
+                    purchase.</li>
             </ul>
         </div>
 
@@ -317,9 +242,9 @@
         <div class="code"><h1 class="column-heading">Code</h1>
                                 <!-- Python code block with comments -->
             <pre>
-                    <span class="cpy-btn" id="btn"><i class="fa fa-copy "></i> Copy</span>
+                    <span class="cpy-btn" id="copy-btn1"><i class="fa fa-copy "></i> Copy</span>
     
-                    <code id="code">
+                    <code id="py-code1">
 #import necessary libraries
 import pandas as pd
 import plotly.graph_objects as go
